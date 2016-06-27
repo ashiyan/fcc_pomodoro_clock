@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Linotte Regular";
+  font-style: normal;
+  src: url("../fonts/Linotte-Light.otf");
+}
+body {
+  font-family: "Linotte Regular";
+  background-color: #e6af4b;
+  color: #192418;
+}
+.settings {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.settings_title {
+  font-size: 150%;
+  margin: 15px;
+  white-space: nowrap;
+}
+.range_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  margin: 10px;
+}
+.range_name {
+  display: block;
+  width: 90px;
+}
+.range_output {
+  display: block;
+  width: 25px;
+}
+.range_line {
+  -webkit-appearance: none;
+  background-color: #f2cbbc;
+  border-radius: 3px;
+  width: 150px;
+  height: 5px;
+}
+.range_line::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #e05038;
+  content: 'A';
+}
+.range_line::-webkit-slider-thumb::after {
+  position: absolute;
+  display: block;
+  content: 'A';
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+.range_line:focus {
+  outline: none;
+}
