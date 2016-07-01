@@ -3,48 +3,93 @@ c_red = #e05038
 c_pink = #f2cbbc
 c_green = #192418
 
-@font-face
-	font-family "Linotte Regular"
-	font-style normal
-	src url(../fonts/Linotte-Light.otf)
+set_size(w = 450px, h = 300px)
+	width w
+	height h
 
+@font-face
+	font-family "Nidus Sans"
+	font-style normal
+	src url(../fonts/Nidus-Sans.ttf)
+
+@font-face
+	font-family "Droid Sans Mono"
+	font-style normal
+	src url(../fonts/Droid-Sans-Mono.ttf)
+	
 body
-	font-family "Linotte Regular"
+	background-image url(../img/main-bg.png)
+	font-family "Nidus Sans"
 	background-color c_orange
 	color c_green
+	perspective 800px
 
+.card
+.timer
+.settings
+	set_size()
+	
+.card
+	margin 50px auto
+
+.timer
 .settings
 	position absolute
+	background-color c_orange
+	backface-visibility hidden
+	box-shadow 0 5px 10px rgba(0,0,0,.5)
+	transition 1s
+	
+.timer
+	transform rotateY(-180deg)
+	display flex
+	flex-wrap wrap
+	justify-content center
+	align-items center
+	&_display
+		set_size(400px, 150px)
+		font-family "Droid Sans Mono"
+		font-weight bold
+		text-align center
+		font-size 800%
+	&_message
+		set_size(370px, 30px)
+		text-align center
+		font-size 170%
+		
+.settings
 	display flex
 	flex-direction column
 	justify-content center
 	align-items center
-	left 0
-	right 0
-	top 0
-	bottom 0
-	margin auto
 	&_title
 		font-size 150%
 		margin 15px
 		white-space nowrap
 		
+.btn
+	set_size(100px, 40px)
+	border none
+	background c_red
+	margin 10px
 	
 .range
 	&_item
 		display flex
 		justify-content space-between
 		align-items center
-		width 300px
+		width 340px
 		margin 10px
 	&_name
-		display block
-		width 90px
+		text-align right
+		width 110px
 	&_output
 		display block
 		width 25px
+		&_units
+			width 30px
 	&_line
-		-webkit-appearance none 	// removes default webkit styles
+		-webkit-appearance none
 		background-color c_pink
 		border-radius 3px
 		width 150px
